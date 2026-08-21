@@ -1,0 +1,158 @@
+%  Autor: Michael Entrup geb. Epping
+%  E-Mail: michael.entrup@wwu.de
+%  Version: 1.1.0
+%  Datum: Januar 2016
+%  Info: Dies is eine einfache Vorlage für das erstellen eines Protokolls.
+%        Die Vorlage basiert auf einer Vorlage von Anke B. Schmidt.
+%        Sie ist auf die Verwendung im Rahmen der Experimentellen Übungen I
+%        im Fachbereich Physik der Uni Münster ausgelegt.
+%  Website: https://github.com/m-entrup/LaTeX-Vorlagen/tree/master/Protokoll
+%  Copyright: CC BY 4.0 (http://creativecommons.org/licenses/by/4.0/)
+
+\documentclass[fontsize=11pt, paper=a4, pagesize=auto, parskip=half, titlepage=on, english, ngerman]{scrartcl}
+\usepackage[T1]{fontenc} % sufficient for XeLaTeX, only switch to pdfLaTeX after cleaning auxillary files
+\usepackage[utf8]{inputenc} % remove this for XeLaTeX, inputenc is unnecessary and can sometimes cause issues. (look at json)
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{babel}
+\usepackage[onehalfspacing]{setspace}
+% \usepackage{subfigure} better to use subcaption for hyperref
+\usepackage{wrapfig}
+\graphicspath{{figures/}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{diagbox}
+\usepackage{array}
+%\usepackage{tikz}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm, bm}
+\usepackage{newtxtext, newtxmath}
+% \usepackage{newtxmath}
+%\usepackage{array}
+\usepackage{chemformula}
+%\let\ce\ch
+%\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+%\sisetup{locale=DE}
+\DeclareSIUnit\m{M}
+\DeclareSIUnit\rpm{rpm}
+\DeclareSIUnit\angstrom{\text{Å}}
+
+%\usepackage{lmodern}
+\usepackage{url}
+\usepackage{microtype}
+%\usepackage[final]{pdfpages}
+\usepackage{float}
+%\usepackage{color,soul}
+%\usepackage{hyperref}
+%\usepackage{url}
+
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}  % hyperref should be loaded as late as possible
+\hypersetup{breaklinks=true, colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black}
+\urlstyle{same}
+
+%\hypersetup{breaklinks=true, colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black}
+\usepackage{tabularx,booktabs}%,newtxmath} 
+\usepackage{multirow}
+%\usepackage{comment}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{anyfontsize}
+\usepackage{scalefnt}
+
+%\usepackage[sorting=none]{biblatex}
+
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=tikz/]
+
+\begin{document}
+
+\input{imports/ma_titlepage.tex}
+
+\newpage
+
+%% Abstract $\sim$ 200 words
+\section*{Zusammenfassung}
+%\addcontentsline{toc}{section}{\protect\numberline{}Abstract}
+%%%
+Lorem ipsum.
+
+\section*{Abstract}
+%\addcontentsline{toc}{section}{\protect\numberline{}Zusammenfassung}
+%%%
+Lorem ipsum.
+
+\newpage
+
+\tableofcontents
+
+\clearpage
+\newpage
+\section{Introduction}
+%%%
+Lorem ipsum.
+\vspace{0.5cm} \\
+Lorem ipsum.
+\vspace{0.5cm} \\
+Lorem ipsum.
+
+\clearpage
+\newpage
+\section{Theoretical Background}
+\label{sec: background}
+%%%
+
+\subsection{Pumps}
+\label{subsec:pumps}
+%%%
+\title{TMP}
+\label{title:tmp}
+%%%
+
+
+\title{Scroll}
+% label{title:scroll}
+%%%
+
+\subsection{Pressure Sensors}
+\label{subsec:pressure sensors}
+%%%
+\title{Pirani}
+\label{title:pirani}
+%%%
+
+\title{CMR}
+\label{title:cmr}
+%%%
+
+\title{TPG}
+\label{title:tpg}
+%%%
+\subsection{RGA}
+\label{subsec:rga}
+%%%
+
+\clearpage
+\newpage
+\section*{Acknowledgements}
+%\addcontentsline{toc}{section}{\protect\numberline{}Acknowledgements}
+%%%
+Lorem ipsum.
+
+
+\medskip
+
+\clearpage
+\newpage
+\section*{Bibliography}
+\addcontentsline{toc}{section}{\protect\numberline{}Bibliography}
+%%%
+%\bibliographystyle{plain}
+\Urlmuskip=0mu plus 1mu\relax
+\bibliographystyle{unsrt}
+\bibliography{imports/bib}
+
+\input{imports/declaration}
+
+\end{document}
